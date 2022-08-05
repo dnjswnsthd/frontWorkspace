@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/*css파일을 html과 분리시켜서 재사용성을 높였다. */
+h1 {
+    width: 200px;
+    height: 200px;
+    background-color: tomato;
+    border: solid 6px;
+    /*margin: 0 30px 0 30px;*/ /* 시계방향 */
+    margin: 100PX 20PX;
+    padding: 20px;
+}

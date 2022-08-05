@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        border: 3px solid red;
+      }
+      header {
+        text-align: center;
+        color: red;
+      }
+      section {
+        margin-left: 75px;
+      }
+      hr {
+        width: 500px;
+      }
+      .input {
+        margin: 200px, 30px, 200px, 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>BNK Theater</h1>
+      <h2>탑 건 매버릭 예매</h2>
+    </header>
+    <hr color="red" />
+    <section>
+      <iframe
+        width="564"
+        height="317"
+        src="https://www.youtube.com/embed/Mrj9XACVJ8U"
+        title="[탑건: 매버릭] 메인 예고편"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <iframe
+        width="564"
+        height="317"
+        src="https://www.youtube.com/embed/0C-21OGwMd0"
+        title="[탑건: 매버릭] 2차 예고편"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </section>
+    <hr color="red" />
+    <div class="input">
+      <span>상영관</span>
+      <select name="job">
+        <option value="CGV">CGV</option>
+        <option value="메가박스">메가박스</option>
+        <option value="롯데시네마">롯데시네마</option>
+        <option value="기타">기타</option>
+      </select>
+      <span>날짜선택</span>
+      <input type="date" /><br />
+      <fieldset>
+        <legend>시간선택</legend>
+        <input type="radio" name="time" value="time1" checked />08:30
+        <input type="radio" name="time" value="time2" />09:40
+        <input type="radio" name="time" value="time3" />11:25
+        <input type="radio" name="time" value="time4" />13:35
+        <input type="radio" name="time" value="time5" />15:40
+        <input type="radio" name="time" value="time6" />18:20
+      </fieldset>
+      <span>요금</span>
+      <span>&nbsp;<del>\9,000</del>&nbsp;&nbsp;</span
+      ><span
+        ><ins><b>\5,000</b></ins></span
+      ><br /><br />
+      <span>인원</span>
+      <input type="number" name="person" /><br /><br />
+      <span>금액</span>
+      <input type="number" name="price" /><br /><br />
+      <input type="checkbox" checked /> 옵션<br /><br />
+      <fieldset>
+        <input type="checkbox" name="snack" value="time1" checked />팝콘
+        <input type="checkbox" name="snack" value="time2" />콜라
+      </fieldset>
+    </div>
+  </body>
+</html>
