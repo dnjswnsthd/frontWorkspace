@@ -1,0 +1,124 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Bazzi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/Bazzi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    font-family: Bazzi;
+}
+
+header h1{
+    text-align: center;
+}
+
+nav{
+    width: 100%;
+    margin: 2% 4% auto;
+    margin-bottom: 7%;
+}
+
+nav li{
+    background-color: rgb(243, 101, 101);    
+    float: left;
+    display: inline;
+    padding: 1% 7%;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a{
+    font-size: large;
+}
+
+#intro{
+    background: linear-gradient(rgb(139, 222, 243), rgb(245, 158, 238));
+    max-height: 284px;
+    margin: 0px 80px auto;
+    border-radius: 30px;
+    position: relative;
+    clear: both;
+}
+
+.inner-image{
+    background-image: url(../img/movie1.jpg);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    min-height: 280px;
+    background-position: 100% 0%;
+    border-radius: 30px;
+    position: relative;
+}
+
+.inner-text{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-90%, -50%);
+    color: white;
+    font-weight: 800;
+}
+
+#cinema{
+    margin-bottom: 7%;
+    font-size: xx-large;
+}
+#cinemaDesc{
+    font-size: large;
+}
+
+#mainContent{
+    margin-left: 10%;
+    margin-right: 1%;
+    float: left;   
+    width: 55%;
+}
+footer{
+    clear: both;
+    margin-left: 8%;
+}
+
+.contentSection{
+    float: left;
+    width: 40%;
+    padding: 2%;
+    margin-left: 3%;
+}
+.minus{
+    margin-bottom: -100px;
+}
+.contentSection img{
+    margin-top: 15%;
+    width: 95%;
+    min-height: 17vmax;
+}
+
+.contentSection video{
+    margin-top: -15%;
+    width: 100%;
+    min-height: 20vmax;
+}
+
+.asideBar{
+    background-color: rgb(243, 101, 101);
+    margin: 1% 10% 5% 70%;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+#asideTitle{
+    margin-left: 10%;
+    font-size: large;
+    color: white;
+}
+
+footer section{
+    float: left;
+    padding: 10px 130px;
+    background-color: rgb(243, 101, 101);
+}
