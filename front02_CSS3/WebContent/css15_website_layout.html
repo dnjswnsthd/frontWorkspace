@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  .header{
+    text-align: center;
+  }
+  .topnav{
+    background-color: darkslategrey;
+    padding: 10px;
+  }
+  .topnav a{
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+  }
+  .row{
+    margin-bottom: 300px;
+  }
+  .column{
+    float:left;
+    width: 33.33%;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  .footer{
+    text-align: center;
+    background-color: lightblue;
+    clear: both;
+    padding: 30px;
+    margin: 50px 450px;
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <h1>Header</h1>
+  <p>Resize the browser window to see the responsive effect.</p>
+</header>
+
+<nav class="topnav">
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+</nav>
+
+<div class="row">
+  <section class="column">
+    <h2>Column</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </section>
+  
+  <section class="column">
+    <h2>Column</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </section>
+  
+  <section class="column">
+    <h2>Column</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </section>
+ </div>  
+ 
+  <!-- 추가하기 -->
+<footer class="footer">
+  	<p><h2>Footer</h2></p>
+</footer>
+
+
+
+</body>
+</html>
+
