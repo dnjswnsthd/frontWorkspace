@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 1. 익명 함수 재정의
+      //   func();
+      //   var func = function () {
+      //     alert("func A...");
+      //   };
+
+      //   var func = function () {
+      //     alert("func B...");
+      //   };
+      //   func();
+
+      // 2. 선언적 함수 재정의는 미리 호출해도 에러 안남
+      //   func();
+      //   function func() {
+      //     alert("func A...");
+      //   }
+
+      //   function func() {
+      //     alert("func B...");
+      //   }
+
+      //   3. 익명 함수 + 선언적 함수 ====> 실행순서
+      // 2 덮어써서 얘가 호출됨
+      var func = function () {
+        alert("Anonymous function...");
+      };
+      // 1
+      function func() {
+        alert("function Anonymous...");
+      }
+      func();
+    </script>
+  </head>
+  <body></body>
+</html>
