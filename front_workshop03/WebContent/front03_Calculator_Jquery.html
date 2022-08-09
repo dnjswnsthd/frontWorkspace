@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Calculator</title>
+    <script>
+      $(function () {
+        var mathExp = "";
+        var res = "";
+        var cnt = 0;
+        $(".input").click(function () {
+          mathExp += $(this).html();
+          $("#formula").val(mathExp);
+        });
+        $(".clear").click(function () {
+          mathExp = "";
+          result = "";
+          $("#formula").val("0.0");
+        });
+        $(".calc").click(function () {
+          res = eval(mathExp);
+          $("#resultDiv").append("<p>" + ++cnt + "." + res + "</p>");
+          mathExp = "";
+          res = "";
+          $("#formula").val("0.0");
+        });
+      });
+    </script>
+    <style type="text/css">
+      h2 {
+        margin-left: 60px;
+      }
+      #calc {
+        border: 1px solid gray;
+        width: 350px;
+        text-align: center;
+      }
+      #formula {
+        text-align: right;
+        width: 80%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+      #resultDiv {
+        text-align: left;
+        margin-left: 40px;
+      }
+      button {
+        width: 70px;
+        height: 70px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Encore Calculator</h2>
+    <p></p>
+    <div id="calc">
+      <input type="text" id="formula" value="" placeholder="0.0" readonly />
+      <div id="pad">
+        <button class="input">7</button>
+        <button class="input">8</button>
+        <button class="input">9</button>
+        <button class="input">+</button>
+        <button class="input">4</button>
+        <button class="input">5</button>
+        <button class="input">6</button>
+        <button class="input">-</button>
+        <button class="input">1</button>
+        <button class="input">2</button>
+        <button class="input">3</button>
+        <button class="input">*</button>
+        <button class="input">0</button>
+        <button class="clear">CE</button>
+        <button class="calc">=</button>
+        <button class="input">/</button>
+      </div>
+      <div id="resultDiv">
+        <h2>결 과 이 력</h2>
+        <p id="result"></p>
+      </div>
+    </div>
+  </body>
+</html>
