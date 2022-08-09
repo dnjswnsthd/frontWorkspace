@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>front03_javascript</name>
+	<name>front04_jQuery</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -30,7 +30,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1660008936452</id>
+			<id>1660029808635</id>
 			<name></name>
 			<type>30</type>
 			<matcher>

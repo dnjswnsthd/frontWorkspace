@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function on() {
+        document.getElementById("myImage").src =
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBjIqomV_U0yzzlg3NlB5qtbYCJQRj3AulUA&usqp=CAU";
+      }
+
+      function off() {
+        document.getElementById("myImage").src = myImage.src =
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkhVXo0PStCaz-E5mudcAtsDhV53vPXqpUFQ&usqp=CAU";
+      }
+    </script>
+  </head>
+  <body>
+    <h2>What Can JavaScript Do?</h2>
+
+    <p>JavaScript can change HTML attribute values.</p>
+
+    <p>
+      In this case JavaScript changes the value of the src (source) attribute of
+      an image.
+    </p>
+    <button onclick="on()">Turn on the light</button>
+
+    <img
+      id="myImage"
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBjIqomV_U0yzzlg3NlB5qtbYCJQRj3AulUA&usqp=CAU"
+      style="width: 150px"
+    />
+
+    <button onclick="off()">Turn off the light</button>
+    <!-- <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">
+      Turn on the light
+    </button>
+
+    <img id="myImage" src="pic_bulboff.gif" style="width: 100px" />
+
+    <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">
+      Turn off the light
+    </button> -->
+  </body>
+</html>

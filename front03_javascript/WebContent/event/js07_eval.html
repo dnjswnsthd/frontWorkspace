@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 1. document.write() 함수는 웹 브라우저로 데이타를 바로 출력...
+      document.write(50 + 70 + "<br>");
+
+      document.write("50 + 70" + "<br>");
+
+      document.write(eval("50 + 70.343") + "<br>");
+
+      document.write(parseFloat("70.343") + parseInt("50") + "<br>");
+
+      // 2. 팝업창 띄우는 방법... alert() confirm() prompt()
+      var ans = confirm("정말로 삭제하시겠습니까?"); // 확인 true return
+      if (ans) document.wirte("삭제되셨습니다.");
+
+      // var number = prompt("당신의 차량번호를 입력하세요..");
+      // document.write("당신의 차량번호는" + number);
+    </script>
+  </head>
+  <body></body>
+</html>

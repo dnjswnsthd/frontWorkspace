@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+      .angel {
+        border: 2px solid black;
+        width: 200px;
+        height: 250px;
+      }
+    </style>
+    <title>Document</title>
+    <script>
+      $(function () {
+        $("img").addClass("angel");
+        // 특정한 시간이 지난 뒤에 이동하도록....첫번째 이미지가 맨 뒤로.
+        /*
+        setTimeout(() => {// 단 한번만 호춤됨
+          $("body").append($("img:first"));
+        }, 3000);
+        */
+        setInterval(() => {
+          //   $("body").append($("img:first"));
+          $("img:first").appendTo($("body"));
+        }, 1000);
+      });
+    </script>
+  </head>
+  <body>
+    <img src="../image/1.jpg" />
+    <img src="../image/2.jpg" />
+    <img src="../image/3.jpg" />
+    <img src="../image/4.jpg" />
+  </body>
+</html>

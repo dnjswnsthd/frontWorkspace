@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function choiceMenu() {
+        var menu = document.frm.menu;
+        /*
+            1. 메뉴를 하나라도 선택하지 않았다면...하나의 메뉴는 선택하세요
+            2. 하나이상의 메뉴를 선택했다면... 선택한 메뉴를 alert창으로 출력
+        */
+        cnt = 0;
+        menus = "";
+        for (var i = 0; i < menu.length; i++) {
+          if (menu[i].checked) {
+            menus += menu[i].value + " ";
+            cnt++;
+          }
+          menu[i].checked = false;
+        }
+        if (cnt === 0) {
+          alert("적어도 하나의 메뉴를 선택하셔야 합니다.");
+        } else {
+          alert("선택하신 메뉴는 " + menus + "입니다.");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form action="#" name="frm">
+      <strong>오늘 먹고 싶은 점심 메뉴를 다 고르세요..</strong><br />
+      <input type="checkbox" name="menu" value="된장찌개" />된장찌개
+      <input type="checkbox" name="menu" value="김치찌개" />김치찌개
+      <input type="checkbox" name="menu" value="카레라이스" />카레라이스
+      <input type="checkbox" name="menu" value="우동" />우동
+      <input type="button" value="CHOICE" onclick="choiceMenu()" />
+    </form>
+  </body>
+</html>

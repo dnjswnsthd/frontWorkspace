@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>val(), text(), html()</title>
+    <script>
+      $(function () {
+        $("button").click(function () {
+          var text1 = "<p>Text.</p>";
+          //   var text2 = $("p").text();
+          var text2 = $("p").html(); // 얘는 됨
+          //   var text2 = $("p").val(); // 진짜 중요 얘는 못받아옴 폼 값 받을때만 쓰는거임 val()은
+
+          var text3 = document.createElement("p");
+          text3.innerHTML = "Text.";
+
+          $("body").append(text1, text2, text3);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>This is a paragraph.</p>
+    <button onclick="appendText()">Append text</button>
+  </body>
+</html>

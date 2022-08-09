@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>onclick 이벤트</title>
+    <script>
+      function push() {
+        demo = document.getElementById("demo"); // 전역 변수
+        demo.innerHTML = "<h2><font color='tomato'>응애</font></h2>";
+      }
+    </script>
+    <style>
+      h1::selection {
+        background-color: black;
+        color: white;
+        font-weight: 900;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>What Can JavaScript Do?</h1>
+
+    <p id="demo">JavaScript can change HTML content.</p>
+
+    <button type="button" onclick="push()">Click Me!</button>
+  </body>
+</html>

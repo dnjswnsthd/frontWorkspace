@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+      div {
+        border-radius: 10px;
+        border: 1px solid red;
+      }
+      #future {
+        border: 1px solid green;
+      }
+    </style>
+    <title>Document</title>
+    <script>
+      $(function () {
+        //1. div 영역을 클릭하면 함수호출되도록...
+        /*
+        $("div").click(function () {
+          $("p").appned("<h2>BNK 부산은행 연수진행...</h2>");
+        });
+        */
+        $("div").click(function () {
+          // on, bind 다 가능
+          $("#future").append("<h2 id='hello'>BNK 부산은행 연수진행...</h2>");
+        });
+        // 2. 처음에는 없었지만.. 나중에 동적으로 생성될 태그에 적용하는 함수는 반드시 ON
+        $("#future").on("click", "#hello", onhello);
+      }); //ready
+      function onhello() {
+        alert("onhello calling");
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <h1>$("selector").on('click')</h1>
+      <!--미래에 존재하는 태그에 대해-->
+      <p>
+        on함수 기능 : 클릭함수와 동일해보이지만 미래에 존재하는 태그에 사용하는
+        함수
+      </p>
+    </div>
+    <div id="future"></div>
+  </body>
+</html>

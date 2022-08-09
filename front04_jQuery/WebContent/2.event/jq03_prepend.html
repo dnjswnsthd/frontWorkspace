@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+      $(function () {
+        // 1. unbind()
+        // $("#btn1").click(function () {
+        //   $("p").prepend("<b>Prepend Text..</b>");
+        //   $(this).unbind();
+        // });
+
+        // $("#btn2").click(function () {
+        //   $("ol").prepend("<li>Prepend Item..</li>");
+        //   $(this).unbind();
+        // });
+        // 2. unbind() 하지 않았다면... one()을 사용한다. (기억하세요!) 셤 나올듯?
+        $("#btn1").one("click", function () {
+          $("p").prepend("<b>Prepend Text..</b>");
+        });
+
+        $("#btn2").one("click", function () {
+          $("ol").prepend("<li>Prepend Item..</li>");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+
+    <ol>
+      <li>List item 1</li>
+      <li>List item 2</li>
+      <li>List item 3</li>
+    </ol>
+
+    <button id="btn1">Prepend text</button>
+    <button id="btn2">Prepend list item</button>
+  </body>
+</html>

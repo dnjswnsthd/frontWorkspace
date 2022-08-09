@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="#" name="ageForm">
+      나이 <input type="text" name="age" />
+      <button type="button" checkAge()">나이 확인</button>
+    </form>
+  </body>
+</html>
+<script>
+  function checkAge() {
+    var age = document.ageForm.age; // 나이를 입력하는 폼까지...
+    // 1. 폼에 입력된 값이 없다면... 나이는 반드시 입력하세요 메시지 띄우고
+    // 2. 숫자 대신에 문자가 입력되면 ... 나이는 숫자로 반드시 입력하세요 메시지 띄우기 isNaN()
+    // 3. 입력된 값이 19이상이라면... 당신은 성인인증 되셨습니다...
+    // 4. 입력된 값이 19미만이라면... 당신은 미성년자 입니다...
+    // 5. 모든 경우에 입력된 값이 리셋...포커스는 다시 ageForm에 맞춰지도록
+    if (age.value === "") {
+      alert("나이를 반드시 입력하세요");
+    } else if (isNaN(age.value)) {
+      alert("나이는 반드시 숫자로 입력하세요");
+    } else if (age.value >= 19) {
+      alert("성인인증 되셨습니다.");
+      location.href = "adult.jsp";
+    } else if (age.value < 19) {
+      alert("미성년자 입니다.");
+      location.replace("child.jsp");
+    }
+    document.ageForm.age.value = "";
+    document.ageForm.age.focus();
+  }
+</script>

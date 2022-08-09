@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+      .angel {
+        border: 2px solid black;
+        width: 200px;
+        height: 250px;
+      }
+    </style>
+    <title>Document</title>
+    <script>
+      $(function () {
+        $("body").append("<h2>태리가 빠졌어염~~^^;;</h2>");
+
+        var img1 = "<img src='../image/1.jpg'>";
+        var img2 = "<img src='../image/2.jpg'>";
+        var img3 = "<img src='../image/3.jpg'>";
+
+        var h1 = "<h1>나의 해방일지</h1>";
+
+        //1.body태그에 h1, img1, img2, img3를 전부 다 부착..이때 이미지는 스타일이 적용되도록
+        $("body").append(h1, img1, img2, img3);
+        $("img").addClass("angel");
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

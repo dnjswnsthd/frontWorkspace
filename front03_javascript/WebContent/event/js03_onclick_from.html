@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function showNick() {
+        nick = document.loginForm.nick.value;
+        alert(nick);
+        document.loginForm.nick.value = "";
+        document.loginForm.hobby.focus();
+      }
+
+      function showHobby() {
+        hobby = document.getElementById("hobby").value;
+        alert(hobby);
+        document.getElementById("hobby").value = "";
+        document.getElementById("nick").focus();
+      }
+    </script>
+  </head>
+  <body>
+    <form action="#" name="loginForm">
+      닉네임 <input type="text" name="nick" id="nick" />
+      <input
+        type="button"
+        onclick="showNick()"
+        value="닉네임보기"
+      /><br /><br />
+      취 미 <input type="text" name="hobby" id="hobby" />
+      <input type="button" onclick="showHobby()" value="취미보기" />
+    </form>
+  </body>
+</html>

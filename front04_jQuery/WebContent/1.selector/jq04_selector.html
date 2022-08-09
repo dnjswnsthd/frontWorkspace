@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+      $(function () {
+        // 1. body의 모든 태그를 선택자로 지정... color를 purple로
+        $("body *").css("color", "purple");
+
+        // 2. body의 모든 태그를  직계자식을 선택자로 지정...border 2px solid tomato
+        // $("body > *").css("border", "2px solid tomato");
+        $("body>*").css("border", "2px solid tomato");
+        // $("body *").css("border", "2px solid tomato");
+      });
+    </script>
+  </head>
+  <body>
+    <div>
+      <ul>
+        <li>Apple</li>
+        <li>Tomato</li>
+        <li>Banana</li>
+        <li>Peach</li>
+        <li>Graph</li>
+      </ul>
+    </div>
+  </body>
+</html>
