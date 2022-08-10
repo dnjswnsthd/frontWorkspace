@@ -22,6 +22,7 @@
           // 2. checkbox에 하나이상의 값을 놓도록...공백일때 alert창 띄우고
           var hobby = $("input[name=hobby]:checked");
           var text = "";
+          
           if(hobby.length === 0){
             alert("하나 이상 체크해주세요");
             return false;
@@ -48,7 +49,7 @@
         </p>
 
         <p>
-          <input type="checkbox" name="hobby" value="fishing" />낚시<br />
+          <input type="checkbox" name="hobby" value="fishing"/>낚시<br />
           <input
             type="checkbox"
             name="hobby"

@@ -6,38 +6,33 @@
 }
 .carousel-item {
 	height: 100vh;
-	min-height: 300px;
+	min-height: 30vh;
 }
 .carousel-caption {
-	bottom: 220px;
+	bottom: 27vh;
 }
 .carousel-caption h5 {
-	font-size: 45px;
+	font-size: 8vh;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-	margin-top: 25px;
+	margin-top : 3%;
 }
 .carousel-caption p {
 	width: 60%;
+	font-size: 3vh;
 	margin: auto;
-	font-size: 18px;
 	line-height: 1.9;
 }
 .carousel-caption a {
 	text-transform: uppercase;
 	text-decoration: none;
-	background: red;
-	padding: 10px 30px;
 	display: inline-block;
 	color: white;
-	margin-top: 15px;
+	border: 1px solid white;
+	max-height: 8vh;
+	min-width : 15vw;
+	margin-top: 5%;
 	border-radius: 10px;
-	background-color: #e74c3c;
-	box-shadow: 0 0 0 1px #c63702 inset,
-		  0 0 0 2px rgba(255,255,255,0.15) inset,
-		  0 8px 0 0 #C24032,
-		  0 8px 0 1px rgba(0,0,0,0.4),
-		  0 8px 8px 1px rgba(0,0,0,0.5);
 }
 .navbar-nav a {
 	font-size: 18px;
@@ -75,14 +70,23 @@
 		background: rgba(0, 0, 0, 0.5);
 	}
 	.carousel-caption {
-		bottom: 165px;
+		bottom: 32vh;
 	}
 	.carousel-caption h5 {
-		font-size: 17px;
+		font-size: medium;
+		margin-bottom: 10%;
 	}
 	.carousel-caption a {
-		padding: 10px 15px;
-		font-size: 15px;
+		font-size: large;
+		margin-top: 1%;
+		padding: 2%;
+		margin-bottom: 15%;
+	}
+	.carousel-caption .loading{
+		font-size: xx-small;
+		width: 8vw;
+		height: 8vw;
+		padding-top: 2%;
 	}
 }
 
@@ -93,24 +97,23 @@
   height: 2rem;
   width: 2rem;
   border-radius: 50%;
+  border: 2px solid white;
+  padding: 2%;
+  padding-bottom: 5%;
 }
 .google-loader span:not(:first-child) {
   margin-left: 10px;
 }
 .google-loader span:nth-child(1) {
-  background: #4285f4;
   animation: move 1s ease-in-out -0.25s infinite alternate;
 }
 .google-loader span:nth-child(2) {
-  background: #db4437;
   animation: move 1s ease-in-out -0.5s infinite alternate;
 }
 .google-loader span:nth-child(3) {
-  background: #f4b400;
   animation: move 1s ease-in-out -0.75s infinite alternate;
 }
 .google-loader span:nth-child(4) {
-  background: #0f9d58;
   animation: move 1s ease-in-out -1s infinite alternate;
 }
 
@@ -148,4 +151,8 @@ span:last-child {
   color: white;
   text-align: center;
   padding: 0.5%;
+}
+
+#logo{
+	max-width: 20vmax;
 }
