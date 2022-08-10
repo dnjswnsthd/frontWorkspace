@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+      $(function () {
+        $("#saveBtn").click(function () {
+          //localStorage에 데이타 저장
+          localStorage.setItem("key1", "안녕");
+          localStorage.key2 = "HI";
+          localStorage["key3"] = "HELLO";
+        });
+        $("#delBtn").click(function () {
+          // localStorage 데이타 삭제
+          localStorage.removeItem("key1");
+        });
+        $("#delAllBtn").click(function () {
+          // localStorage의 모든 데이타 삭제
+          localStorage.clear();
+        });
+        $("#showBtn").click(function () {
+          localStorage.getItem("key2");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button id="saveBtn">저장</button>
+    <button id="delBtn">삭제</button>
+    <button id="delAllBtn">전체삭제</button>
+    <button id="showBtn">내용보기</button>
+  </body>
+</html>

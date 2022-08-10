@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+    <style type="text/css"></style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        //1. allCheck 을 클릭하면 모든 메뉴부분이 동시에 체크가 되도록 작성... click or change
+        // $("input[name=allCheck]").click(() => {
+        //   // allCheck 부분이 체크가 되어져 있다면 나머지 menu부분도 다 체크가 되어지도록
+        //   if ($(this).prop("checked", true))
+        //     $("input[name=menu]").prop("checked", true);
+        // });
+        //2. allCheck 체크에 따라서 나머지 menu 부분이 함께 적용되도록...
+        $(":checkbox[name=allCheck]").change(() => {
+          var allCheck = $(this).prop("checked"); // true, false
+          $("input[name=menu]").prop("checked", allCheck);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h3>메뉴 선택하기</h3>
+    <p></p>
+    <table border="2" bgcolor="yellow" width="400">
+      <tr>
+        <td><input type="checkbox" name="allCheck" /></td>
+        <td>전체선택</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="menu" /></td>
+        <td>짜장면</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="menu" /></td>
+        <td>짬뽕</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="menu" /></td>
+        <td>탕슉</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="menu" /></td>
+        <td>양장피</td>
+      </tr>
+    </table>
+  </body>
+</html>

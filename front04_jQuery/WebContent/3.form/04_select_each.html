@@ -1,0 +1,44 @@
+<!-- 
+	위에 세개가 같은 역할을 한다.
+	$('선택자').click(function(){})
+	$('선택자').bind('click', function(){})
+	$('선택자').on('click', function(){})
+	::
+	$('선택자').one('click', function(){})
+ -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+    <style type="text/css"></style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("#addOptionBtn").one("click", function () {
+          var arr = ["경렬", "유진", "재호", "승민", "채원", "태경", "효석"];
+          //   1. each() 사용해서 배열안의 친구들의 이름을 select>option 만들어서 붙임....append()
+          $.each(arr, function (index, item) {
+            $("#friend").append(
+              "<option value=" + item + ">" + item + "</option>"
+            );
+          });
+          //   arr.forEach((item) => {
+          //     $("#friend").append(
+          //       "<option value=" + item + ">" + item + "</option>"
+          //     );
+          //   });
+        }); //one
+        // 2. 옵션 삭제버튼을 클릭하면 생성된 폼을 삭제....
+        $("#deleteOptionBtn").click(function () {
+          $("#friend>option").remove();
+        });
+      }); //ready
+    </script>
+  </head>
+  <body>
+    <input type="button" value="옵션 생성" id="addOptionBtn" />
+    <input type="button" value="옵션 삭제" id="deleteOptionBtn" />
+    <select id="friend"></select>
+  </body>
+</html>
