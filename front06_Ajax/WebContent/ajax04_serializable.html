@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+      $(function () {
+    	  $("#frm").submit(function(){
+    		  // 폼에 입력된 값을 다 가지고 서버로 전송하는 기능...serialize()
+    		  
+    		  var query = $(this).serialize();
+    		  alert(query);
+    		  
+    		  return false;
+    	  })
+      });
+    </script>
+  </head>
+  <body>
+  	<form action="SerializeServlet" id="frm">
+        NAME : <input type="text" name="name">
+        <input type="hidden" name="command" value="register"><p>
+
+        <select name="tool">
+            <option value="editplus">editplus</option>
+            <option value="eclipse">eclipse</option>
+            <option value="starUML">starUML</option>
+        </select><P>
+
+        <input type="checkbox" name="program" value="JAVA">JAVA
+        <input type="checkbox" name="program" value="Jquery">Jquery
+        <input type="checkbox" name="program" value="Spring">Spring
+        <input type="checkbox" name="program" value="JDBC">JDBC
+        <p>
+        <input type="submit" value="FormSend">
+    </form>
+  </body>
+</html>
