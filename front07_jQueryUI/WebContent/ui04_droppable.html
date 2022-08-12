@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery UI Droppable - Default functionality</title>
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.13.2/themes/sunny/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<style>
+#clothing {
+	margin-left: 50px;
+	width: 600px;
+	float: left;
+}
+
+#cart {
+	margin-right: 150px;
+	width: 450px;
+	float: right;
+	padding: 2px;
+	margin-top: 1px;
+}
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script>
+	$(function() {
+		// 1. 어코디언 적용
+		$("#catalog").accordion({
+			heightStyle: 'content'
+		});
+
+		// 2. draggable() 적용
+		$("#catalog li").draggable({
+			helper: 'clone',
+			appendTo: '#cart'
+		});
+		
+		// 3. droppable() 적용
+		$("#cart ol").droppable({
+			drop: function( event, ui ) {
+				$(this).find(".drophere").remove();
+		        var uidrag = ui.draggable.text();
+		        $(this).append("<li>" + uidrag + "</li>")
+		      }
+		});
+	});
+</script>
+</head>
+<body>
+	<div id="clothing">
+		<h2 class="ui-widget-header">카달로그</h2>
+		<div id="catalog">
+			<h2>
+				<a href="#">상의류</a>
+			</h2>
+			<div>
+				<ul>
+					<li>셔츠</li>
+					<li>가디건</li>
+					<li>블라우스</li>
+					<li>슈트정장</li>
+					<li>점퍼</li>
+					<li>버버리</li>
+				</ul>
+			</div>
+			<h2>
+				<a href="#">하의류</a>
+			</h2>
+			<div>
+				<ul>
+					<li>정장바지</li>
+					<li>면바지</li>
+					<li>청바지</li>
+					<li>반바지</li>
+				</ul>
+			</div>
+
+			<h2>
+				<a href="#">엑세서리</a>
+			</h2>
+			<div>
+				<ul>
+					<li>백팩</li>
+					<li>손목시계</li>
+					<li>손지갑</li>
+					<li>장지갑</li>
+					<li>이어링</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- cart부분 :: drop할 영역을 추가적으로 생성 -->
+	<div id="cart">
+		<h2 class="ui-widget-header">Clothing Cart</h2>
+		<div class="ui-widget-content">
+			<ol>
+				<li class="drophere">Drop here</li>
+			</ol>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
