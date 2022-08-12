@@ -7,14 +7,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
       $(function () {
-        $("#eachBtn").click(function () {
+        $('#eachBtn').click(function () {
           //버튼을 클릭하면 배열을 생성...
           var array = []; //선언과 생성
-          array.push("염미정");
-          array.push("구자경");
-          array.push("염창희");
-          array.push("우영우");
-          var data = "";
+          array.push('염미정');
+          array.push('구자경');
+          array.push('염창희');
+          array.push('우영우');
+          var data = '';
           // alert(array.toString());
 
           // 1. for 문을 사용해서 배열안에 있는 데이타를 alert창으로 출력...
@@ -44,7 +44,7 @@
           // alert(data);
           // 5. foreach 함수
           array.forEach((item) => {
-            data += item + " ";
+            data += item + ' ';
           });
           alert(data);
         }); //click
