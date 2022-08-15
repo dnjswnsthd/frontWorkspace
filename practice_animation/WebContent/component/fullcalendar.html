@@ -65,11 +65,11 @@
           allDaySlot: false,
           selectHelper: true,
           select: function (start, end, allDay) {
-            $('.modal').fadeIn();
-            $('#close').click(function () {
-              $('.modal').fadeOut();
-            });
-            // var title = prompt('Event Title:');
+            // $('.modal').fadeIn();
+            // $('#close').click(function () {
+            //   $('.modal').fadeOut();
+            // });
+             var title = prompt('Event Title:');
             if (title) {
               calendar.fullCalendar(
                 'renderEvent',
