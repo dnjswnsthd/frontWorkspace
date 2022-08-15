@@ -10,14 +10,14 @@
       window.onload = function () {
         // onload써서 html모든 요소들이 다 메모리에 올라가고 나서 실행되도록 하는 기능.
         // (안쓸시 script를 html파일 맨아래에 써줘야만 한다. )
-        var list = "";
+        var list = '';
         // 1. 복합연산자 사용
-        list += "<ul>";
-        list += "<li>Hello</li>";
-        list += "<li>JavaScript!!</li>";
-        list += "</ul>";
+        list += '<ul>';
+        list += '<li>Hello</li>';
+        list += '<li>JavaScript!!</li>';
+        list += '</ul>';
         // 2. html 특정태그를 바당와서 그 부분에 출력이 되도록 한다.
-        document.getElementById("wrap").innerHTML = list;
+        document.getElementById('wrap').innerHTML = list;
       };
     </script>
   </head>
