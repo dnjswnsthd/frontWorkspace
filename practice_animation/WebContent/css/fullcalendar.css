@@ -642,7 +642,7 @@ table.fc-header{
 }
 
 .fc-week .fc-day:hover .fc-day-number{
-    background-color: #B8B8B8;
+    background-color: #a9f577;
     border-radius: 50%;
     color: #FFFFFF;
     transition: background-color 0.2s;

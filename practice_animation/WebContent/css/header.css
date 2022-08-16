@@ -1,6 +1,8 @@
 * {
 	font-family: 'Montserrat', sans-serif;
 }
+
+
 .navbar{
     background-color: darkslategrey;
 }
@@ -18,7 +20,7 @@
 	color: red;
 }
 ul a{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 ul li{
     margin-right: 3%;
