@@ -1,5 +1,12 @@
+@font-face {
+	font-family: 'GongGothicMedium';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	}
+
 * {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'GongGothicMedium', sans-serif;
 }
 
 .nav-tabs > li {
@@ -31,8 +38,8 @@ body {
 }
 
 ::-webkit-scrollbar {
-	width: 6px;
-	height: 6px;
+	width: 10px;
+	height: 10px;
   }
   /* Track */
   ::-webkit-scrollbar-track {
@@ -196,8 +203,8 @@ body {
 .form-register .steps li a .step-text {
     color: #ccc;
     font-weight: 600;
-    font-size: 15px;
-    padding: 25px 0 8px;
+    font-size: 1.2rem;
+    padding: 28px 0 8px 15px;
 }
 .form-register .steps .current .step-text,
 .form-register .steps .done .step-text {

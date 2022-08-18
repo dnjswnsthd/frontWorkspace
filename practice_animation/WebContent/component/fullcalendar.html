@@ -65,11 +65,12 @@
           allDaySlot: false,
           selectHelper: true,
           select: function (start, end, allDay) {
-            // $('.modal').fadeIn();
-            // $('#close').click(function () {
-            //   $('.modal').fadeOut();
-            // });
+            $('.modal').fadeIn();
+            $('#close').click(function () {
+               $('.modal').fadeOut();
+            });
              var title = prompt('Event Title:');
+             console.log(title);
             if (title) {
               calendar.fullCalendar(
                 'renderEvent',
@@ -159,9 +160,15 @@
       });
     </script>
     <style>
+      @font-face {
+        font-family: 'GongGothicMedium';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
       body {
         font-size: 14px;
-        font-family: 'Helvetica Nueue', Arial, Verdana, sans-serif;
+        font-family: 'GongGothicMedium', Arial, Verdana, sans-serif;
       }
 
       #external-events {
@@ -207,6 +214,29 @@
         box-shadow: 0 1px 2px #c3c3c3;
         /* border: 1px solid black; */
       }
+
+      .modal{
+        z-index: 1050;
+      }
+      #span{
+        display: inline-block;
+        margin-right: 5%;
+      }
+      #large{
+        width: 30vmax;
+        height: 5vmax;
+      }
+      .btn{
+        background-color: #db4437;
+        color: white;
+        width: 15vmax;
+        padding: 2%;
+        margin: 5% 4% auto;
+        border-radius: 10px;
+      }
+      select, select option, input{
+        font-family: GongGothicMedium;
+      }
     </style>
   </head>
   <body>
@@ -219,20 +249,23 @@
       <div class="modal_content" title="클릭하면 창이 닫힙니다.">
         <form action="fullcalendar.html" id='Frm'>
           <h1>소비 등록<h1>
-          <h3>대분류</h3>
+          <h3 id='span'>대분류</h3>
           <select name="large" id="large">
             <option value="cafe">카페</option>
             <option value="etc">등등</option>
           </select>
-          <h3>소분류</h3>
+          <br>
+          <h3 id='span'>소분류</h3>
           <select name="large" id="large">
             <option value="startbucks">스타벅스</option>
             <option value="tomntoms">탐앤탐스</option>
           </select>
-          <h3>금액</h3>
+          <br>
+          <h3 id='span'>금액</h3>
           <input type="number" name="price" value="0" />
-          <input type="submit" value="modalSend" />
-          <input id="close" type="button" value="close" />
+          <br>
+          <input class="btn" type="submit" value="modalSend" />
+          <input class="btn" id="close" type="button" value="close" />
         </form>
       </div>
     </div>
